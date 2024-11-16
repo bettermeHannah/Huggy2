@@ -1,0 +1,133 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #fefcf8;
+  color: #a47913; /* Updated color */
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  background: #f9f9f9;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #a47913; /* Updated color */
+  font-weight: bold;
+}
+
+.logo:hover {
+  color: #3a78d6;
+  cursor: pointer;
+}
+
+/* Hero Section with Background */
+.hero {
+  position: relative;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%);
+  width: 77%; /* Occupies 77% of page width */
+  height: 100%; /* Full height */
+  background: url('assets/bg.png') no-repeat center center;
+  background-size: cover;
+  opacity: 0.3; /* 30% transparency */
+  z-index: -1; /* Behind other content */
+}
+
+.hero .tagline {
+  font-size: 1.8rem;
+  color: #a47913; /* Updated color */
+  margin-bottom: 20px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between images */
+}
+
+.hero-image {
+  width: 30%; /* Reduce image size */
+  max-width: 150px; /* Ensure the images are not too large */
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Content View */
+.content-view {
+  background-color: #f9f9f9;
+  padding: 30px 20px;
+}
+
+.content-image {
+  width: 60%;
+  max-width: 500px;
+  margin: 0 auto 20px;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-image.hover-effect:hover {
+  transform: scale(1.05); /* Slight zoom-in effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.description {
+  font-size: 1rem;
+  color: #666;
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: left;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #4d90fe;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #3a78d6;
+  transform: translateY(-2px); /* Slight "lift" effect */
+}
+
+/* Footer */
+.footer {
+  background: #e4f2f8;
+  padding: 10px 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.footer p {
+  font-size: 0.9rem;
+  color: #72777a;
+  margin: 0;
+}
